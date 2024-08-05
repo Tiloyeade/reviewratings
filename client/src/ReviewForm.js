@@ -11,7 +11,7 @@ const ReviewForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/api/reviews', { cleanliness, services, facilities });
+            const response = await axios.post('http://localhost:5000/api/reviews', { cleanliness, services, facilities });
             setMessage('Review submitted successfully!');
         } catch (error) {
             setMessage('Failed to submit review');
